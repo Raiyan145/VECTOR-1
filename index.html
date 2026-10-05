@@ -1,0 +1,254 @@
+<!doctype html><html lang="bn"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1020"><title>HSC Physics — Vector Master Note</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap');
+:root{--bg:#070b16;--panel:#0e1527;--text:#edf2ff;--muted:#9ca9c5;--line:#23304b;--accent:#7c9cff;--accent2:#62e6c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0%,#172653 0,transparent 34%),radial-gradient(circle at 90% 10%,#153d43 0,transparent 28%),var(--bg);color:var(--text);font-family:"Hind Siliguri",sans-serif;line-height:1.75}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}.hero{padding:54px 0 30px}.eyebrow{font-family:Inter,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--accent2);font-size:12px;font-weight:800}
+h1{font-family:Inter,"Hind Siliguri",sans-serif;font-size:clamp(32px,5vw,62px);line-height:1.08;margin:12px 0}.hero p{max-width:760px;color:var(--muted);font-size:18px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.badge{padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:#0c1324;color:#cbd6f2;font-size:13px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(7,11,22,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:10px 0}.tools{display:flex;gap:10px;align-items:center}
+input{flex:1;min-width:0;background:#0c1324;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:11px 14px;font:inherit}button{background:var(--accent);color:#071021;border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
+.layout{display:grid;grid-template-columns:250px 1fr;gap:24px;padding:28px 0 70px}.toc{position:sticky;top:66px;align-self:start;background:rgba(14,21,39,.78);border:1px solid var(--line);border-radius:18px;padding:14px}.toc h3{margin:4px 8px 10px;font-family:Inter}.toc a{display:block;color:var(--muted);padding:8px 9px;border-radius:9px;font-size:14px}.toc a:hover{background:#17213a;color:white}
+.chapter{background:linear-gradient(180deg,rgba(18,27,49,.92),rgba(12,18,33,.92));border:1px solid var(--line);border-radius:22px;margin-bottom:22px;overflow:hidden;box-shadow:0 16px 45px rgba(0,0,0,.18)}
+.chapter-head{display:flex;gap:15px;padding:23px 24px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(124,156,255,.09),transparent)}.chapter-no{font-family:Inter;color:var(--accent2);font-size:22px;font-weight:800}h2{font-size:23px;line-height:1.35;margin:0 0 4px}.chapter-label{font-family:Inter;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#71809f}
+.content{padding:20px 24px 26px}.content p{margin:9px 0;color:#d4dcf0}.bullet{margin:9px 0;padding:10px 13px;border-left:3px solid #4e6bb7;background:#0a1120;border-radius:0 10px 10px 0;color:#dce4f7}.content h3{font-size:18px;color:#fff;margin:22px 0 8px}
+.formula{margin:12px 0;padding:13px 15px;background:#071c24;border:1px solid #174b55;border-radius:12px;color:#8ff0dc;font-family:"Cambria Math","Times New Roman",serif;overflow:auto}.tip{margin:18px 0;padding:14px 16px;border:1px solid #5d4a1e;background:rgba(255,209,102,.07);border-radius:13px;color:#ffe6a1}
+.footer{text-align:center;color:#71809f;padding:25px 0 50px;font-size:13px}.hidden{display:none!important}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.toc{position:relative;top:auto;display:flex;overflow:auto;gap:5px;padding:8px}.toc h3{display:none}.toc a{white-space:nowrap}.hero{padding-top:34px}}
+@media print{body{background:white;color:#111}.toolbar,.toc{display:none}.layout{display:block}.chapter{box-shadow:none;break-inside:avoid;background:white;border-color:#ddd}.content p,.bullet{color:#222}}
+</style></head><body>
+<header class="hero wrap"><div class="eyebrow">HSC Physics 1st Paper • Exam Focused</div>
+<h1>ভেক্টর<br><span style="color:#7c9cff">Master Note</span></h1>
+<p>সংজ্ঞা → সূত্র → প্রয়োগ → বোর্ড কেস → দ্রুত রিভিশন। পরীক্ষার আগে দ্রুত পড়া ও সমস্যার সমাধানের জন্য সাজানো একটি পূর্ণাঙ্গ Vector Revision Sheet.</p>
+<div class="badges"><span class="badge">📘 8 Chapters</span><span class="badge">🧮 Formula Board</span><span class="badge">🎯 Exam Tips</span><span class="badge">⚡ Quick Revision</span></div></header>
+<div class="toolbar"><div class="wrap tools"><input id="search" placeholder="নোটে খুঁজুন — যেমন: dot, নদী, লব্ধি, একক ভেক্টর..."><button onclick="window.print()">Print</button></div></div>
+<main class="wrap layout"><nav class="toc"><h3>Contents</h3><a href="#chapter-1">১. ভেক্টরের মৌলিক ধারণা ও কতিপয় বিশেষ ভেক্টর</a><a href="#chapter-2">২. ভেক্টর যোজন, বিয়োজন ও সামান্তরিক সূত্র</a><a href="#chapter-3">৩. ভেক্টরের বিভাজন ও বাস্তব জীবনের প্রয়োগ</a><a href="#chapter-4">৪. নদী ও নৌকার গতি সংক্রান্ত গাণিতিক কেস</a><a href="#chapter-5">৫. ত্রিমাত্রিক স্থানাঙ্ক ব্যবস্থায় ভেক্টর ও দিক কোসাইন</a><a href="#chapter-6">৬. ভেক্টর গুণন ও ত্রিগুণফল</a><a href="#chapter-7">৭. ভেক্টর ক্যালকুলাস ও ভেক্টর সমাকলন</a><a href="#chapter-8">৮. 🔥 Final Revision Sheet</a></nav>
+<div id="notes"><section class="chapter" id="chapter-1"><div class="chapter-head"><span class="chapter-no">01</span><div><h2>১. ভেক্টরের মৌলিক ধারণা ও কতিপয় বিশেষ ভেক্টর (Basic Concepts &amp; Special Vectors)</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>পদার্থবিজ্ঞানে ভৌত রাশিগুলোকে মূলত দুটি শ্রেণীতে ভাগ করা হয়—স্কেলার রাশি ও ভেক্টর রাশি।</p>
+<div class="bullet">স্কেলার রাশি (Scalar Quantity): যেসকল ভৌত রাশিকে সম্পূর্ণরূপে প্রকাশ করার জন্য কেবল মানের প্রয়োজন হয়, দিকের প্রয়োজন হয় না, তাদেরকে স্কেলার রাশি বলে। যেমন: দৈর্ঘ্য, ভর, দ্রুতি, কাজ, তাপমাত্রা ইত্যাদি।</div>
+<div class="bullet">ভেক্টর রাশি (Vector Quantity): যেসকল ভৌত রাশিকে সম্পূর্ণরূপে প্রকাশ করার জন্য মান ও দিক উভয়েরই প্রয়োজন হয়, তাদেরকে ভেক্টর বা সদিক রাশি বলে। যেমন: সরণ, ওজন, বেগ, ত্বরণ, বল, তড়িৎ তীব্রতা ইত্যাদি।</div>
+<p>ভেক্টর রাশির মৌলিক বৈশিষ্ট্যসমূহ:</p>
+<h3>১. ভেক্টর রাশিকে প্রকাশের জন্য মান ও দিক উভয়ই আবশ্যক।</h3>
+<h3>২. শুধু মান, শুধু দিক কিংবা মান ও দিক উভয় পরিবর্তিত হলে ভেক্টর রাশির পরিবর্তন ঘটে।</h3>
+<h3>৩. সাধারণ গাণিতিক বা বীজগাণিতিক নিয়মে ভেক্টরের যোগ, বিয়োগ বা গুণ করা যায় না; এগুলো ভেক্টর বীজগাণিতিক নিয়ম অনুসরণ করে।</h3>
+<h3>৪. দুটি অ-শূন্য ভেক্টর রাশির ডট গুণফল বা স্কেলার গুণফল শূন্য হতে পারে।</h3>
+<h3>৫. দুটি ভেক্টরের গুণফল গুণনের প্রকৃতির ওপর নির্ভর করে স্কেলার বা ভেক্টর উভয়ই হতে পারে।</h3>
+<p>ভেক্টরের সংকেত ও প্রকাশরীতি:</p>
+<p>হাতে লেখার সময় ভেক্টরকে অক্ষরের ওপর তীর চিহ্ন (\vec{A}), রেখা চিহ্ন (\bar{A}), বা অক্ষরের নিচে রেখা চিহ্ন (\underline{A}) দিয়ে প্রকাশ করা হয়। ছাপার অক্ষরে সাধারণত মোটা হরফ (\mathbf{A}) দিয়ে ভেক্টর এবং সরু হরফ (A বা |\vec{A}|) দিয়ে ভেক্টরের মান প্রকাশ করা হয়। একক ভেক্টরের ক্ষেত্রে অক্ষরের ওপর টুপি বা হ্যাাট (\hat{a}, \hat{i}) চিহ্ন ব্যবহার করা হয়।</p>
+<p>কতিপয় বিশেষ ভেক্টরের শ্রেণীবদ্ধকরণ:</p>
+<p>ভেক্টরের নাম	সংজ্ঞা ও গাণিতিক প্রকাশ / বৈশিষ্ট্য</p>
+<p>স্বাধীন ভেক্টর (Free Vector)	যে ভেক্টর রাশির পাদবিন্দু ইচ্ছামত পছন্দ করা যায়।</p>
+<p>সীমাবদ্ধ ভেক্টর (Localized Vector)	যে ভেক্টরের পাদবিন্দু নির্দিষ্ট করে রাখা হয় (যেমন: অবস্থান ভেক্টর)।</p>
+<p>সদৃশ ভেক্টর (Like Vectors)	সমজাতীয় দুই বা ততোধিক ভেক্টর যদি একই দিকে ক্রিয়া করে।</p>
+<p>বিসদৃশ ভেক্টর (Unlike Vectors)	সমজাতীয় দুটি ভেক্টর যদি পরস্পর বিপরীত দিকে ক্রিয়া করে।</p>
+<div class="formula">সমান ভেক্টর (Equal Vectors)	সমজাতীয় দুটি ভেক্টরের মান ও দিক উভয়ই যদি একই হয় (\vec{A} = \vec{B})।</div>
+<div class="formula">ঋণাত্মক / বিপরীত ভেক্টর (Negative Vector)	নির্দিষ্ট দিকের ভেক্টরের সমমানের ও বিপরীতমুখী ভেক্টর (\vec{PQ} = \vec{A} \Rightarrow \vec{QP} = -\vec{A})।</div>
+<p>সমরেখ ভেক্টর (Collinear Vectors)	দুই বা ততোধিক ভেক্টর একই সরলরেখা বরাবর বা সমান্তরালে ক্রিয়া করলে।</p>
+<p>সমতলীয় ভেক্টর (Coplanar Vectors)	দুই বা ততোধিক ভেক্টর যদি একই সমতলে অবস্থান করে।</p>
+<p>সঠিক ভেক্টর (Proper Vector)	যে ভেক্টরের মান শূন্য নয় ($</p>
+<p>নল বা শূন্য ভেক্টর (Null / Zero Vector)	যে ভেক্টরের মান শূন্য (\vec{0})। এর পাদবিন্দু ও শীর্ষবিন্দু একই; দিক অনিশ্চিত।</p>
+<div class="formula">একক ভেক্টর (Unit Vector)	যে ভেক্টরের মান ১ একক। সূত্র: $\hat{a} = \frac{\vec{A}}{</div>
+<div class="formula">অবস্থান ভেক্টর (Position Vector)	প্রসঙ্গ কাঠামোর মূলবিন্দুর সাপেক্ষে কোনো বিন্দুর অবস্থান নির্দেশক ভেক্টর (\vec{r} = \vec{OP})। একে ব্যাসার্ধ ভেক্টরও বলা হয়।</div>
+<div class="formula">সরণ ভেক্টর (Displacement Vector)	অবস্থান ভেক্টরের পরিবর্তন (\Delta \vec{r} = \vec{r}_f - \vec{r}_i)।</div>
+<p>বিপরীতীপ / ব্যতিহার ভেক্টর (Reciprocal Vector)	সমজাতীয় দুটি সমান্তরাল ভেক্টরের একটির মান অপরটির বিপরীত সংখ্যা হলে (যেমন: \vec{A} = 7\hat{i} \Rightarrow \vec{B} = \frac{1}{7}\hat{i})।</p>
+<p>পোলার ভেক্টর (Polar Vector)	ঘূর্ণনের সাথে যুক্ত নয়, প্রারম্ভিক/প্রয়োগ বিন্দু নির্দিষ্ট এবং গতির দিকে ক্রিয়া করে (যেমন: সরণ, বেগ, বল)।</p>
+<p>অক্ষীয় ভেক্টর (Axial Vector)	ঘূর্ণনের সাথে যুক্ত এবং ঘূর্ণন অক্ষ বরাবর ক্রিয়া করে (যেমন: কৌণিক বেগ, কৌণিক ত্বরণ, টর্ক)।</p>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>ক-সংজ্ঞামূলক প্রশ্নে &quot;একক ভেক্টর&quot; বা &quot;ব্যতিহার ভেক্টর&quot; লেখার সময় কেবল গাণিতিক সূত্র লিখলে পূর্ণ নম্বর পাওয়া যায় না। সূত্রের সাথে অবশ্যই অনুবন্ধী শর্ত যেমন |\vec{A}| \neq 0 উল্লেখ করতে হবে।</p>
+<p>এই প্রাথমিক সংজ্ঞা এবং ভেক্টরের মৌলিক ধর্মগুলো জ্যামিতিক উপায়ে ভেক্টর যোজন, বিয়োজন ও লব্ধি নির্ণয়ের মূল ভিত্তি স্থাপন করে।</p></div></section><section class="chapter" id="chapter-2"><div class="chapter-head"><span class="chapter-no">02</span><div><h2>২. ভেক্টর যোজন, বিয়োজন ও সামান্তরিক সূত্র (Vector Addition, Subtraction &amp; Parallelogram Law) [RB&#x27;24; BB&#x27;23]</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>ভেক্টর যোজন ও বিয়োজনের মূল নিয়ম:</p>
+<div class="bullet">ভেক্টর যোজন: দুই বা ততোধিক সমজাতীয় ভেক্টর যোগ করলে একটি নতুন ভেক্টর পাওয়া যায়, যাকে লব্ধি (Resultant) বলে। জ্যামিতিক নিয়মে প্রথম ভেক্টরের শীর্ষবিন্দুতে দ্বিতীয় ভেক্টরের পাদবিন্দু বসিয়ে প্রথমটির পাদবিন্দু থেকে শেষটির শীর্ষবিন্দু যুক্ত করলে লব্ধি পাওয়া যায় (ত্রিভুজ ও বহুভুজ সূত্র)।</div>
+<div class="bullet">ভেক্টর বিয়োজন: একটি ভেক্টর থেকে অপর ভেক্টর বিয়োগ করা মানে প্রথম ভেক্টরের সাথে দ্বিতীয় ভেক্টরের ঋণাত্মক ভেক্টর যোগ করা: \vec{C} = \vec{A} - \vec{B} = \vec{A} + (-\vec{B})।</div>
+<p>ভেক্টর বীজগণিতের মৌলিক সূত্রাবলী:</p>
+<h3>১. বিনিময় সূত্র (Commutative Law): \vec{A} + \vec{B} = \vec{B} + \vec{A} [RB&#x27;24]</h3>
+<h3>২. সংযোগ সূত্র (Associative Law): (\vec{A} + \vec{B}) + \vec{C} = \vec{A} + (\vec{B} + \vec{C}) (অর্থাৎ, বহুসংখ্যক ভেক্টরের যোগফল বা লব্ধি ভেক্টর তাদের যোগের ক্রমের ওপর নির্ভর করে না)।</h3>
+<h3>৩. বণ্টন সূত্র (Distributive Law): m(\vec{A} + \vec{B}) = m\vec{A} + m\vec{B} (যেখানে m একটি স্কেলার)।</h3>
+<p>সামান্তরিক সূত্র (Law of Parallelogram):</p>
+<p>সূত্র: যদি কোনো সামান্তরিকের কোনো কৌণিক বিন্দু থেকে অঙ্কিত দুটি সংনিহিত বাহু দ্বারা কোনো কণার ওপর এককালীন ক্রিয়াশীল একই জাতীয় দুটি ভেক্টরের মান ও দিক নির্দেশ করা যায়, তবে ওই বিন্দু থেকে অঙ্কিত সামান্তরিকের কর্ণটি ভেক্টরদ্বয়ের লব্ধির মান ও দিক নির্দেশ করবে।</p>
+<div class="bullet">লব্ধির মান (R):</div>
+<div class="formula">R = \sqrt{P^2 + Q^2 + 2PQ\cos\alpha}</div>
+<p>(যেখানে P ও Q দুটি ভেক্টর এবং \alpha তাদের অন্তর্বর্তী কোণ)।</p>
+<div class="bullet">লব্ধির দিক (\theta):</div>
+<div class="formula">\tan\theta = \frac{Q\sin\alpha}{P + Q\cos\alpha} \Rightarrow \theta = \tan^{-1}\left(\frac{Q\sin\alpha}{P + Q\cos\alpha}\right)</div>
+<p>(এখানে \theta হলো P ভেক্টরের সাথে লব্ধি R-এর উৎপন্ন কোণ)।</p>
+<div class="tip">💡 ম্নেমোনিক শর্টকাট (Memory Shortcut):</div>
+<p>&quot;যার সাথে angle, সে বসে নিচে single&quot;</p>
+<p>(অর্থাৎ, লব্ধি যার সাথে \theta কোণ তৈরি করবে, হরে সেই ভেক্টরটি একক বা Single হিসেবে বসবে। যেমন: P-এর সাথে কোণ হলে হরে P একা বসবে, আর উপরে-নিচে Q\sin\alpha ও Q\cos\alpha যুক্ত হবে)।</p>
+<p>বিশেষ কেস ও পরীক্ষার শর্টকাট (Special Cases):</p>
+<h3>১. সর্বোচ্চ লব্ধি (R_{max}): যখন \alpha = 0^\circ (ভেক্টরদ্বয় একই দিকে ক্রিয়াশীল)।</h3>
+<div class="formula">R_{max} = P + Q ২. সর্বনিম্ন লব্ধি (R_{min}): যখন \alpha = 180^\circ (ভেক্টরদ্বয় বিপরীত দিকে ক্রিয়াশীল)।</div>
+<div class="formula">R_{min} = |P - Q| ৩. সমান মানের ভেক্টর (P = Q): [BB&#x27;23]</div>
+<div class="formula">R = 2P\cos\left(\frac{\alpha}{2}\right) \quad \text{এবং} \quad \theta = \frac{\alpha}{2}</div>
+<p>(অর্থাৎ, দুটি সমান বল ক্রিয়া করলে লব্ধি তাদের মধ্যবর্তী কোণকে সমদ্বিখণ্ডিত করে। উদাহরণস্বরূপ: দুটি 20\text{ N} বল 70^\circ কোণে কাজ করলে লব্ধির কোণ হবে \theta = 35^\circ)। ৪. সমকোণে ক্রিয়াশীল সমান বল (\alpha = 90^\circ, P = Q = F):</p>
+<div class="formula">R = \sqrt{2}F ৫. যোগফল ও বিয়োগফলের মান সমান হওয়ার শর্ত (|\vec{A}+\vec{B}| = |\vec{A}-\vec{B}|): [RB&#x27;19; DB&#x27;17]</div>
+<div class="formula">শর্ত হলো অন্তর্ভুক্ত কোণ \alpha = 90^\circ।</div>
+<p>পদ্ধতিগত প্রমাণ:</p>
+<div class="formula">|\vec{A}+\vec{B}|^2 = |\vec{A}-\vec{B}|^2</div>
+<div class="formula">\Rightarrow A^2 + B^2 + 2AB\cos\alpha = A^2 + B^2 + 2AB\cos(180^\circ - \alpha)</div>
+<div class="formula">\Rightarrow 2AB\cos\alpha = -2AB\cos\alpha</div>
+<div class="formula">\Rightarrow 4AB\cos\alpha = 0 \Rightarrow \cos\alpha = 0 \Rightarrow \alpha = 90^\circ</div>
+<p>চিত্রাঙ্কন নির্দেশিকা (Spatial Description for Parallelogram):</p>
+<p>চিত্র আঁকার সময় O বিন্দুকে মূলবিন্দু ধরে অনুভূমিক OA বাহু বরাবর \vec{P} এবং OB বাহু বরাবর \vec{Q} নির্দেশ করতে হবে। OA ও OB-এর মধ্যবর্তী কোণ \alpha। এবার OACB সামান্তরিকটি সম্পন্ন করলে বিন্দু O থেকে অঙ্কিত OC কর্ণটি লব্ধি \vec{R} প্রকাশ করবে, যা OA বাহুর সাথে \theta কোণ উৎপন্ন করে।</p>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>সৃজনশীল গ-অংশে লব্ধির দিক নির্ণয়ের সময় ছাত্র-ছাত্রীরা প্রায়ই ভুল করে কেবল \theta-এর মান বের করে রেখে দেয়। পূর্ণ নম্বর পেতে হলে \theta-এর সাথে কার সাপেক্ষে কোণ তৈরি হয়েছে (যেমন: &quot;অনুভূমিক P বলের সাথে 23.41^\circ কোণে&quot;) তা স্পষ্টভাবে বাক্যে লিখতে হবে।</p>
+<p>লব্ধি সূত্রের এই নীতিগুলোকে কাজে লাগিয়ে যেকোনো ভেক্টরকে অনুভূমিক ও উলম্ব উপাংশে বিভাজিত করে বাস্তব জীবনের জটিল গতি সমাধান করা যায়।</p></div></section><section class="chapter" id="chapter-3"><div class="chapter-head"><span class="chapter-no">03</span><div><h2>৩. ভেক্টরের বিভাজন ও বাস্তব জীবনের প্রয়োগ (Vector Resolution &amp; Real-World Applications)</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>ভেক্টর বিভাজন পদ্ধতি (Vector Resolution):</p>
+<p>একটি ভেক্টর রাশিকে দুই বা ততোধিক ভেক্টর রাশিতে বিভক্ত করার পদ্ধতিকে ভেক্টরের বিভাজন বলে এবং বিভক্ত অংশগুলোকে মূল ভেক্টরের উপাংশ (Component) বলে।</p>
+<h3>১. পরস্পর লম্ব উপাংশ (Rectangular Components in 2D):</h3>
+<p>\vec{R} ভেক্টরটি অনুভূমিকের সাথে \alpha কোণে থাকলে:</p>
+<div class="bullet">অনুভূমিক বা লম্বাংশ উপাংশ (X = R\cos\alpha): কোণ \alpha-এর সংলগ্ন বাহু (রেফারেন্স অনুভূমিক রেখা বরাবর)।</div>
+<div class="bullet">উলম্ব বা লম্ব উপাংশ (Y = R\sin\alpha): কোণ \alpha-এর বিপরীত বাহু (লম্ব রেখা বরাবর)।</div>
+<h3>২. যেকোনো দুই দিকে বিভাজন (Non-perpendicular Split):</h3>
+<p>\vec{R} ভেক্টরটি দুটি উপাংশ X ও Y-এর সাথে যথাক্রমে \alpha ও \beta কোণ তৈরি করলে:</p>
+<div class="formula">X = \frac{R\sin\beta}{\sin(\alpha+\beta)}, \quad Y = \frac{R\sin\alpha}{\sin(\alpha+\beta)}</div>
+<h3>৩. লম্বাংশ উপপাদ্যের সাহায্যে একাধিক ভেক্টরের লব্ধি: [CB&#x27;22; Din.B&#x27;21]</h3>
+<div class="formula">X-অক্ষ বরাবর উপাংশগুলোর যোগফল, R_x = \sum R_i \cos\theta_i</div>
+<div class="formula">Y-অক্ষ বরাবর উপাংশগুলোর যোগফল, R_y = \sum R_i \sin\theta_i</div>
+<div class="formula">লব্ধির মান R = \sqrt{R_x^2 + R_y^2} এবং দিক \theta = \tan^{-1}\left(\frac{R_y}{R_x}\right)।</div>
+<p>বাস্তব জীবনের প্রয়োগ (HSC অনুধাবনমূলক প্রশ্নাবলি):</p>
+<h3>১. লন রোলার টানা সহজ কিন্তু ঠেলা কঠিন কেন? (Lawn Roller): [BB&#x27;24; CB&#x27;23; SB&#x27;22]</h3>
+<div class="bullet">টানার ক্ষেত্রে (Pulling): হাতল ধরে F বলে \theta কোণে টানলে বলের উলম্ব উপাংশ F_y = F\sin\theta খাড়া উপরের দিকে কাজ করে। ফলে লন রোলারের আপাত ওজন হয়:</div>
+<div class="formula">W_{apparent} = mg - F\sin\theta</div>
+<p>ওজন হ্রাস পাওয়ায় ভূমির সাথে ঘর্ষণ বল কমে যায় এবং রোলার সহজে সামনে এগিয়ে যায়।</p>
+<div class="bullet">ঠেলার ক্ষেত্রে (Pushing): F বলে \theta কোণে ঠেললে উলম্ব উপাংশ F_y = F\sin\theta খাড়া নিচের দিকে কাজ করে। ফলে আপাত ওজন বৃদ্ধি পায়:</div>
+<div class="formula">W_{apparent} = mg + F\sin\theta</div>
+<p>ওজন বেড়ে যাওয়ার কারণে ঘর্ষণ বল বেড়ে যায়, ফলে রোলার ঠেলা কষ্টকর।</p>
+<h3>২. ট্রলি ব্যাগের হাতল লম্বা রাখা হয় কেন? (Trolley Bag): [Ctg.B&#x27;24, 23; RB&#x27;22; Din.B&#x27;21; CB&#x27;16]</h3>
+<p>ট্রলি ব্যাগের হাতল লম্বা হলে ভূমির সাথে হাতলের উৎপন্ন কোণ \theta ছোট হয় (\theta_1 &lt; \theta_2)। আমরা জানি, \theta এর মান কমলে \cos\theta এর মান বাড়ে। ফলে টানা বলের অনুভূমিক উপাংশ F_x = F\cos\theta বৃদ্ধি পায়। বড় অনুভূমিক উপাংশের কারণে ট্রলি ব্যাগ টানা অনেক সহজ হয়।</p>
+<h3>৩. দড়ি দিয়ে নৌকা টানা / গুণ টানা (Boat Towing with Rope): [Ctg.B&#x27;22; CB&#x27;22; JB&#x27;21]</h3>
+<p>দড়ির টান F বা T-কে দুটি উপাংশে ভাগ করা হয়: T\cos\theta (নৌকাকে নদীর দৈর্ঘ্য বরাবর সামনে নেয়) এবং T\sin\theta (নৌকাকে তীরের দিকে টানে, যা হালের সাহায্যে প্রমিত করা হয়)। দড়ি যত লম্বা হবে, \theta কোণ তত ছোট হবে (\theta_1 &lt; \theta_2 &lt; \theta_3 \Rightarrow T\cos\theta_1 &gt; T\cos\theta_2 &gt; T\cos\theta_3)। ফলে সামনে নেওয়ার উপাংশ T\cos\theta বড় হওয়ায় দ্রুত নৌকা চলে।</p>
+<h3>৪. পাখির আকাশে ওড়া (Bird Flight Mechanics):</h3>
+<p>পাখি আকাশে ওড়ার সময় দুই ডানার সাহায্যে বাতাসে O বিন্দু থেকে দুটি বল প্রয়োগ করে। বাতাসের প্রতিক্রিয়া বল হিসেবে ডানাদ্বয়ের ওপর OA ও OB বরাবর প্রতিক্রিয়া বল কাজ করে। OA ও OB-কে সংনিহিত বাহু ধরে OACB সামান্তরিক আঁকলে কর্ণ OC বরাবর লব্ধি প্রতিক্রিয়া বল কাজ করে, যা পাখিকে সামনের দিকে এগিয়ে নেয়। যদি দুই ডানার ধাক্কা সমান হয়, তবে পাখি সোজা যায়; আর এক ডানায় বেশি ধাক্কা দিলে লব্ধি বল সেদিকে বেঁকে যায়, ফলে পাখি দিক পরিবর্তন করতে পারে।</p>
+<p>টানা বনাম ঠেলা সংক্ষেপিত সামারি টেবিল:</p>
+<p>প্যারামিটার / গুণাবলী	লন রোলার টানা (Pulling)	লন রোলার ঠেলা (Pushing)</p>
+<p>উলম্ব উপাংশের দিক (F_y)	খাড়া উপরের দিকে (F\sin\theta)	খাড়া নিচের দিকে (F\sin\theta)</p>
+<p>আপাত ওজন (W_{apparent})	mg - F\sin\theta (প্রকৃত ওজনের চেয়ে কম)	mg + F\sin\theta (প্রকৃত ওজনের চেয়ে বেশি)</p>
+<p>ঘর্ষণ বলের প্রভাব	ঘর্ষণ বল হ্রাস পায়	ঘর্ষণ বল বৃদ্ধি পায়</p>
+<p>গতির স্বাচ্ছন্দ্য	অপেক্ষাকৃত সহজ ও আরামদায়ক	অপেক্ষাকৃত কঠিন ও কষ্টসাধ্য</p>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>লন রোলার বা ট্রলি ব্যাগের অনুধাবনমূলক প্রশ্ন উত্তরে কেবল মুখে ব্যাখ্যা না লিখে W_{apparent} = mg \mp F\sin\theta গাণিতিক সমীকরণ ও ভেক্টর বিভাজনের ছোট একটি ডায়াগ্রাম ফ্রি-হ্যান্ডে এঁকে দিলে পূর্ণ নম্বর নিশ্চিত হয়।</p>
+<p>দ্বিমাত্রিক বিভাজনের এই লম্বাংশ উপপাদ্য নদী ও নৌকার জটিল গতিবিদ্যা বিশ্লেষণ করার মূল হাতিয়ার।</p></div></section><section class="chapter" id="chapter-4"><div class="chapter-head"><span class="chapter-no">04</span><div><h2>৪. নদী ও নৌকার গতি সংক্রান্ত গাণিতিক কেস (River-Boat Dynamics) [Ctg.B&#x27;24, 17; CB&#x27;19]</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>মূল প্রতীকসমূহ:</p>
+<div class="bullet">নদীর স্রোতের বেগ = u</div>
+<div class="bullet">স্থির পানিতে নৌকার বেগ = v</div>
+<div class="bullet">নৌকার লব্ধি বেগ = w</div>
+<div class="bullet">স্রোত ও নৌকার বেগের অন্তর্বর্তী কোণ = \alpha</div>
+<div class="bullet">নদীর প্রস্থ = d</div>
+<div class="bullet">পার বরাবর সরণ (Drift) = x</div>
+<div class="bullet">পারাপারের সময় = t = \frac{d}{v\sin\alpha}</div>
+<p>নদী-নৌকা পারাপারের তুলনা তালিকা:</p>
+<p>বৈশিষ্ট্য / বিষয়	Case 1: সর্বনিম্ন দূরত্বে / সোজা অপর পাড়ে পারাপার	Case 2: সর্বনিম্ন সময়ে নদী পারাপার</p>
+<p>শর্ত (Condition)	সোজা বিপরীত বিন্দুতে পৌঁছাতে হবে। &lt;br&gt; \alpha = \cos^{-1}\left(-\frac{u}{v}\right) (শর্ত: u &lt; v)	সোজাসুজি অপর পাড়ে যাওয়ার তাগিদ নেই, দ্রুত পৌঁছানো লক্ষ্য। &lt;br&gt; \alpha = 90^\circ (\sin\alpha = 1)</p>
+<div class="formula">লব্ধি বেগ (w)	w = \sqrt{v^2 - u^2}	w = \sqrt{u^2 + v^2}</div>
+<div class="formula">পারাপারের সময় (t)	t = \frac{d}{\sqrt{v^2 - u^2}}	t_{min} = \frac{d}{v}</div>
+<div class="formula">পার বরাবর সরণ (x)	x = (u + v\cos\alpha)t = 0	x = (u + v\cos 90^\circ)t = ut = u\left(\frac{d}{v}\right)</div>
+<div class="formula">অতিক্রান্ত পথ (s)	s = d (নদীর প্রস্থের সমান)	s = \sqrt{d^2 + x^2}</div>
+<p>গাণিতিক বোর্ডের সম্পূর্ণ সমাধান (Board Case Study Insight): [Ctg.B&#x27;24, 17; CB&#x27;19]</p>
+<p>উদ্দীপক: নদীর প্রস্থ d = 400\text{ m}, স্রোতের বেগ u = 1.2\text{ ms}^{-1}। সুজন AB (প্রস্থ) বরাবর v_1 = 6\text{ ms}^{-1} বেগে এবং কুবের AC বরাবর স্রোতের সাথে \alpha = 120^\circ কোণে v_2 = 5.5\text{ ms}^{-1} বেগে রওয়ানা দিল।</p>
+<div class="bullet">(গ) কুবের প্রকৃতপক্ষে কত মানের বেগে অপর পাড়ে পৌঁছাল?</div>
+<p>সমাধান:</p>
+<div class="formula">কুবেরের লব্ধি বেগ, w = \sqrt{u^2 + v_2^2 + 2uv_2\cos\alpha}</div>
+<div class="formula">w = \sqrt{(1.2)^2 + (5.5)^2 + 2(1.2)(5.5)\cos 120^\circ}</div>
+<div class="formula">w = \sqrt{1.44 + 30.25 - 6.6} = \sqrt{25.09} = 5\text{ ms}^{-1}</div>
+<p>উত্তর: কুবের প্রকৃতপক্ষে 5\text{ ms}^{-1} লব্ধি বেগে অপর পাড়ে পৌঁছাল।</p>
+<div class="bullet">(ঘ) সুজন ও কুবেরের মধ্যে কে আগে অপর পাড়ে পৌঁছাবে? গাণিতিক বিশ্লেষণ:</div>
+<p>সমাধান:</p>
+<div class="bullet">সুজনের সময় (t_1): সোজা প্রস্থ বরাবর নৌকা চালালে (\alpha_1 = 90^\circ):</div>
+<div class="formula">t_1 = \frac{d}{v_1 \sin\alpha_1} = \frac{400}{6 \sin 90^\circ} = 66.67\text{ সেকেন্ড}</div>
+<div class="bullet">কুবেরের সময় (t_2): \alpha_2 = 120^\circ কোণে নৌকা চালালে:</div>
+<div class="formula">t_2 = \frac{d}{v_2 \sin\alpha_2} = \frac{400}{5.5 \sin 120^\circ} = \frac{400}{5.5 \times 0.866} = 83.98\text{ সেকেন্ড}</div>
+<div class="bullet">সিদ্ধান্ত: যেহেতু t_1 &lt; t_2, তাই সুজন কুবেরের চেয়ে আগে অপর পাড়ে পৌঁছাবে।</div>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>&quot;কে আগে পৌঁছাবে&quot; টাইপের প্রশ্নে শিক্ষার্থীরা লব্ধি বেগ w দিয়ে সময় বের করতে গিয়ে ভুল করে। সর্বদা মনে রাখবে, পারাপারের সময়ের জন্য মূল সমীকরণ হলো t = \frac{d}{v\sin\alpha} (যেখানে v স্থির পানিতে নৌকার বেগ, লব্ধি বেগ নয়)।</p>
+<p>দ্বিমাত্রিক সমতলীয় গতি ব্যাখ্যা করার পর এবার আমরা ত্রিমাত্রিক কার্তেসীয় স্থানাঙ্ক ব্যবস্থায় ভেক্টরের বীজগাণিতিক রূপায়ণ আলোচনা করব।</p></div></section><section class="chapter" id="chapter-5"><div class="chapter-head"><span class="chapter-no">05</span><div><h2>৫. ত্রিমাত্রিক স্থানাঙ্ক ব্যবস্থায় ভেক্টর ও দিক কোসাইন (3D Vectors &amp; Direction Cosines)</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>ত্রিমাত্রিক আয়ত একক ভেক্টর (Rectangular Unit Vectors):</p>
+<p>ত্রিমাত্রিক কার্তেসীয় স্থানাঙ্ক ব্যবস্থার তিনটি ধনাত্মক অক্ষ (X, Y, Z) বরাবর বিবেচিত তিনটি একক ভেক্টরকে আয়ত একক ভেক্টর বলে। এদেরকে যথাক্রমে \hat{i}, \hat{j}, \hat{k} দ্বারা সূচিত করা হয়।</p>
+<p>ত্রিমাত্রিক অবস্থান ভেক্টর (3D Vector Representation):</p>
+<div class="formula">ত্রিমাত্রিক স্থানে কোনো বিন্দু P(A_x, A_y, A_z) হলে, প্রসঙ্গ কাঠামোর মূলবিন্দু O(0,0,0)-এর সাপেক্ষে এর অবস্থান ভেক্টর: \vec{A} = A_x\hat{i} + A_y\hat{j} + A_z\hat{k}</div>
+<div class="bullet">ভেক্টরের মান (Magnitude):</div>
+<div class="formula">|\vec{A}| = A = \sqrt{A_x^2 + A_y^2 + A_z^2}</div>
+<div class="bullet">সমান্তরাল একক ভেক্টর (Parallel Unit Vector):</div>
+<div class="formula">\hat{a} = \frac{\vec{A}}{|\vec{A}|} = \frac{A_x\hat{i} + A_y\hat{j} + A_z\hat{k}}{\sqrt{A_x^2 + A_y^2 + A_z^2}}</div>
+<p>দিক কোসাইন (Direction Cosines):</p>
+<p>ত্রিমাত্রিক কার্তেসীয় স্থানাঙ্ক ব্যবস্থায় কোনো ভেক্টর \vec{A} ধনাত্মক X, Y, Z অক্ষের সাথে যথাক্রমে \alpha, \beta, \gamma কোণ উৎপন্ন করলে, ওই কোণগুলোর কোসাইন মানকে (\cos\alpha, \cos\beta, \cos\gamma) দিক কোসাইন বলা হয়।</p>
+<div class="formula">\cos\alpha = \frac{A_x}{|\vec{A}|} = l, \quad \cos\beta = \frac{A_y}{|\vec{A}|} = m, \quad \cos\gamma = \frac{A_z}{|\vec{A}|} = n</div>
+<div class="tip">📌 দিক কোসাইনের মৌলিক বৈশিষ্ট্য:</div>
+<p>যেকোনো ভেক্টরের দিক কোসাইনগুলোর বর্গের সমষ্টি সর্বদাই ১ হয়।</p>
+<div class="formula">l^2 + m^2 + n^2 = \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1</div>
+<p>উপাদান আকারে বীজগণিতীয় অপারেশন:</p>
+<div class="bullet">যোগ: \vec{A} + \vec{B} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} + (A_z + B_z)\hat{k}</div>
+<div class="bullet">বিয়োগ: \vec{A} - \vec{B} = (A_x - B_x)\hat{i} + (A_y - B_y)\hat{j} + (A_z - B_z)\hat{k}</div>
+<div class="bullet">দুই বিন্দুর দূরত্ব: P(x_1, y_1, z_1) ও Q(x_2, y_2, z_2) হলে PQ = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}</div>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>এমসিকিউ-তে যদি উদ্দীপকে দেওয়া থাকে \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1, সেখান থেকে প্রায়ই \sin^2\alpha + \sin^2\beta + \sin^2\gamma-এর মান জানতে চাওয়া হয়। ট্রিক: (1-\sin^2\alpha) + (1-\sin^2\beta) + (1-\sin^2\gamma) = 1 \Rightarrow \sin^2\alpha + \sin^2\beta + \sin^2\gamma = 2।</p>
+<p>ত্রিমাত্রিক উপাদানভিত্তিক এই প্রকাশ ভেক্টরের ডট ও ক্রস গুণন গাণিতিকভাবে হিসাব করা সহজতর করে তোলে।</p></div></section><section class="chapter" id="chapter-6"><div class="chapter-head"><span class="chapter-no">06</span><div><h2>৬. ভেক্টর গুণন ও ত্রিগুণফল (Dot &amp; Cross Products, Triple Product)</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><h3>১. স্কেলার বা ডট গুণন (Scalar / Dot Product):</h3>
+<p>দুটি ভেক্টরের গুণনে যদি একটি স্কেলার রাশি পাওয়া যায়, তবে তাকে স্কেলার গুণন বলে। এর মান ভেক্টরদ্বয়ের মান এবং তাদের অন্তর্ভুক্ত ক্ষুদ্রতর কোণের cosine-এর গুণফলের সমান।</p>
+<div class="formula">\vec{A} \cdot \vec{B} = AB\cos\theta = A_x B_x + A_y B_y + A_z B_z</div>
+<div class="bullet">বৈশিষ্ট্য: এটি বিনিময় সূত্র মেনে চলে (\vec{A} \cdot \vec{B} = \vec{B} \cdot \vec{A})।</div>
+<div class="bullet">একক ভেক্টরের ডট গুণন: \hat{i}\cdot\hat{i} = \hat{j}\cdot\hat{j} = \hat{k}\cdot\hat{k} = 1 এবং \hat{i}\cdot\hat{j} = \hat{j}\cdot\hat{k} = \hat{k}\cdot\hat{i} = 0।</div>
+<div class="bullet">লম্ব অভিক্ষেপ (Projection) ও উপাংশ:</div>
+<div class="bullet">\vec{A} এর দিকে \vec{B} এর লম্ব অভিক্ষেপ B\cos\theta = \frac{\vec{A} \cdot \vec{B}}{A}</div>
+<div class="bullet">\vec{B} এর দিকে \vec{A} এর লম্ব অভিক্ষেপ A\cos\theta = \frac{\vec{A} \cdot \vec{B}}{B}</div>
+<div class="bullet">লম্ব হওয়ার গুরুত্বপূর্ণ শর্ত (Perpendicular Condition):</div>
+<div class="formula">\vec{A} \perp \vec{B} \iff \vec{A} \cdot \vec{B} = 0 \iff A_x B_x + A_y B_y + A_z B_z = 0</div>
+<h3>২. ভেক্টর বা ক্রস গুণন (Vector / Cross Product):</h3>
+<p>দুটি ভেক্টরের গুণনে যদি একটি ভেক্টর রাশি পাওয়া যায়, তবে তাকে ভেক্টর গুণন বলে। এর মান ভেক্টরদ্বয়ের মান এবং তাদের অন্তর্ভুক্ত ক্ষুদ্রতর কোণের sine-এর গুণফলের সমান। দিক ডানহাতি স্ক্রু নিয়ম দ্বারা নির্ধারিত হয়।</p>
+<div class="formula">\vec{A} \times \vec{B} = \hat{n} AB\sin\theta = \begin{vmatrix} \hat{i} &amp; \hat{j} &amp; \hat{k} \\ A_x &amp; A_y &amp; A_z \\ B_x &amp; B_y &amp; B_z \end{vmatrix}</div>
+<div class="bullet">বৈশিষ্ট্য: এটি বিনিময় সূত্র মেনে চলে না; এটি বিরোধী-বিনিময় নিয়ম মেনে চলে (\vec{A} \times \vec{B} = - \vec{B} \times \vec{A})।</div>
+<div class="bullet">একক ভেক্টরের ক্রস গুণন: \hat{i}\times\hat{i} = \hat{j}\times\hat{j} = \hat{k}\times\hat{k} = \vec{0} এবং \hat{i}\times\hat{j} = \hat{k}, \ \hat{j}\times\hat{k} = \hat{i}, \ \hat{k}\times\hat{i} = \hat{j}।</div>
+<div class="bullet">জ্যামিতিক তাৎপর্য:</div>
+<div class="bullet">\vec{A} ও \vec{B} বাহুদ্বয় দ্বারা গঠিত সামান্তরিকের ক্ষেত্রফল = |\vec{A} \times \vec{B}| = AB\sin\theta</div>
+<div class="bullet">\vec{A} ও \vec{B} দ্বারা গঠিত ত্রিভুজের ক্ষেত্রফল = \frac{1}{2}|\vec{A} \times \vec{B}|</div>
+<div class="bullet">সমান্তরাল হওয়ার শর্ত (Parallel Condition):</div>
+<div class="formula">\vec{A} \parallel \vec{B} \iff \vec{A} \times \vec{B} = \vec{0} \iff \frac{A_x}{B_x} = \frac{A_y}{B_y} = \frac{A_z}{B_z}</div>
+<h3>৩. স্কেলার ত্রিগুণফল (Scalar Triple Product):</h3>
+<p>তিনটি ভেক্টর রাশি \vec{A}, \vec{B}, \vec{C}-এর ক্ষেত্রে দুটি ভেক্টরের ক্রস গুণফলের সাথে তৃতীয় ভেক্টরের ডট গুণন করা হলে তাকে স্কেলার ত্রিগুণফল বলে।</p>
+<div class="formula">\vec{A} \cdot (\vec{B} \times \vec{C}) = \begin{vmatrix} A_x &amp; A_y &amp; A_z \\ B_x &amp; B_y &amp; B_z \\ C_x &amp; C_y &amp; C_z \end{vmatrix}</div>
+<div class="bullet">ভৌত তাৎপর্য: স্কেলার ত্রিগুণফল একটি সামান্তরিকী ঘনবস্তুর (Parallelepiped) আয়তন প্রকাশ করে (V = \vec{A} \cdot (\vec{B} \times \vec{C}))।</div>
+<div class="bullet">সমতলীয় হওয়ার শর্ত (Coplanar Condition): তিনটি ভেক্টর একই সমতলে অবস্থান করলে ঘনবস্তুর উচ্চতা বা আয়তন শূন্য হবে।</div>
+<div class="formula">\vec{A} \cdot (\vec{B} \times \vec{C}) = 0</div>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>তিনটি ভেক্টর সমতলীয় কিনা তা প্রমাণের জন্য ক্রস গুণন করে ডট গুণন করার দীর্ঘ পদ্ধতির চেয়ে নির্ণায়ক পদ্ধতি (\begin{vmatrix} A_x &amp; A_y &amp; A_z \\ B_x &amp; B_y &amp; B_z \\ C_x &amp; C_y &amp; C_z \end{vmatrix} = 0) ব্যবহার করলে অতি দ্রুত ও নির্ভুলভাবে উত্তর মেলানো যায়।</p>
+<p>ভেক্টরের বীজগাণিতিক গুণন থেকে ব্যবকলনীয় ও সমাকলন অপারেটর চালনার মাধ্যমে ভেক্টর ক্যালকুলাসের ভিত্তি স্থাপিত হয়।</p></div></section><section class="chapter" id="chapter-7"><div class="chapter-head"><span class="chapter-no">07</span><div><h2>৭. ভেক্টর ক্যালকুলাস ও ভেক্টর সমাকলন (Vector Calculus &amp; Vector Integration)</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>ডেল / নাবলা অপারেটর (\nabla):</p>
+<p>স্যার হ্যামিল্টন কর্তৃক আবিষ্কৃত ডেল (\nabla) হলো একটি ত্রিমাত্রিক ভেক্টর ব্যবকলনীয় অপারেটর: \nabla = \hat{i}\frac{\partial}{\partial x} + \hat{j}\frac{\partial}{\partial y} + \hat{k}\frac{\partial}{\partial z}</p>
+<p>ভেক্টর ক্যালকুলাস অপারেশন সমূহের বিস্তারিত বিবরণ:</p>
+<p>অপারেশন (Operation)	গাণিতিক সূত্র (Mathematical Formula)	ইনপুট \rightarrow আউটপুট	ভৌত তাৎপর্য (Physical Significance)	পরীক্ষার জন্য &#x27;Must-Remember&#x27; শর্ত</p>
+<p>গ্র্যাডিয়েন্ট (Gradient)	\text{grad } \phi = \nabla \phi = \hat{i}\frac{\partial \phi}{\partial x} + \hat{j}\frac{\partial \phi}{\partial y} + \hat{k}\frac{\partial \phi}{\partial z}	স্কেলার ক্ষেত্র \rightarrow ভেক্টর ক্ষেত্র	কোনো স্কেলার ক্ষেত্রের সর্বোচ্চ বৃদ্ধির হার ও দিক নির্দেশ করে। এর মান হলো স্কেলার ফাংশনটির ঢাল।	স্কেলার রাশিকে ভেক্টরে রূপান্তর করে।</p>
+<p>ডাইভারজেন্স (Divergence)	\text{div } \vec{V} = \nabla \cdot \vec{V} = \frac{\partial V_x}{\partial x} + \frac{\partial V_y}{\partial y} + \frac{\partial V_z}{\partial z}	ভেক্টর ক্ষেত্র \rightarrow স্কেলার ক্ষেত্র	কোনো বিন্দুর চারপাশে প্রবাহীর আয়তন প্রসারণ বা সংকোচনের হার। &lt;br&gt; • \nabla \cdot \vec{V} &gt; 0 \Rightarrow প্রসারিত / উৎস (Source) &lt;br&gt; • \nabla \cdot \vec{V} &lt; 0 \Rightarrow সংকুচিত / সিন্ক (Sink)	সলিনয়ডাল (Solenoidal): &lt;br&gt; \nabla \cdot \vec{V} = 0 &lt;br&gt; (অসংকোচনশীল প্রবাহী; মোট প্রবাহী নির্গমন = আগমন)।</p>
+<p>কার্ল (Curl)	\text{curl } \vec{V} = \nabla \times \vec{V} = \begin{vmatrix} \hat{i} &amp; \hat{j} &amp; \hat{k} \\ \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\ V_x &amp; V_y &amp; V_z \end{vmatrix}	ভেক্টর ক্ষেত্র \rightarrow ভেক্টর ক্ষেত্র	ভেক্টর ক্ষেত্রের ঘূর্ণন বা আবর্তন নির্দেশ করে। রৈখিক বেগ \vec{v} ও কৌণিক বেগ \vec{\omega}-এর সম্পর্ক: \nabla \times \vec{v} = 2\vec{\omega}।	অঘূর্ণনশীল ও সংরক্ষণশীল: &lt;br&gt; \nabla \times \vec{V} = \vec{0} &lt;br&gt; (ঘূর্ণনশীল হলে \nabla \times \vec{V} \neq \vec{0})।</p>
+<div class="tip">⚠️ বিশেষ আইডেন্টিটি: যেকোনো ভেক্টর ক্ষেত্রের কার্লের ডাইভারজেন্স সর্বদাই শূন্য হয়: \nabla \cdot (\nabla \times \vec{V}) = 0।</div>
+<div class="formula">উল্লেখনীয় যে, \vec{A} \cdot \vec{B} = \vec{B} \cdot \vec{A} হলেও \nabla \cdot \vec{V} \neq \vec{V} \cdot \nabla।</div>
+<p>ভেক্টর সমাকলনের প্রকারভেদ (Vector Integration Types):</p>
+<p>পদার্থবিজ্ঞানে ভেক্টর ক্ষেত্রের সমাকলন মূলত তিন প্রকার: ১. রেখা যোগজ বা রেখা সমাকল (Line Integral): \int_a^b \vec{A} \cdot d\vec{l} = \int_a^b (A_x dx + A_y dy + A_z dz) (কাজ W = \int \vec{F} \cdot d\vec{r} নির্ণয়ে ব্যবহৃত)।</p>
+<h3>২. তল যোগজ বা তল সমাকল (Surface Integral): \int_S \vec{A} \cdot d\vec{a} (তড়িৎ ফ্লাক্স বা প্রবাহীর ফ্লাক্স নির্ণয়ে ব্যবহৃত)।</h3>
+<h3>৩. আয়তন যোগজ বা আয়তন সমাকল (Volume Integral): \int_V \vec{A} dV (ঘনবস্তুর মোট ভর বা চার্জ গণনা করতে ব্যবহৃত)।</h3>
+<div class="tip">💡 পরীক্ষার কৌশল (Exam Strategy Tip):</div>
+<p>গাণিতিক সমস্যায় আংশিক ব্যবকলন (\frac{\partial}{\partial x}) করার সময় x-এর সাপেক্ষে সমাকলন বা ব্যবকলন করার সময় y ও z-কে ধ্রুবক (Constant) হিসেবে ধরতে হবে। এটি ভুল করলে পুরো গাণিতিক উত্তর ভুল হয়ে যায়।</p>
+<p>এই মূল নীতি ও সূত্রগুলোকে সংকলন করে নিচে পরীক্ষার আগের ১০ মিনিটের জন্য দ্রুত রিভিশন শিট প্রদান করা হলো।</p></div></section><section class="chapter" id="chapter-8"><div class="chapter-head"><span class="chapter-no">08</span><div><h2>৮. 🔥 Final Revision Sheet (এইচএসসি দ্রুত রিভিশন শিট)</h2><span class="chapter-label">HSC Physics 1st Paper • Vector</span></div></div><div class="content"><p>৮.১ এক নজরে সব গুরুত্বপূর্ণ সংজ্ঞা</p>
+<div class="bullet">একক ভেক্টর: যে ভেক্টরের মান ১ একক (\hat{a} = \frac{\vec{A}}{|\vec{A}|}, যেখানে |\vec{A}| \neq 0)।</div>
+<div class="bullet">অবস্থান ভেক্টর: প্রসঙ্গ কাঠামোর মূলবিন্দুর সাপেক্ষে কোনো বিন্দুর অবস্থান নির্দেশক ভেক্টর (\vec{r}).</div>
+<div class="bullet">সলিনয়ডাল ক্ষেত্র: যে ভেক্টর ক্ষেত্রের ডাইভারজেন্সের মান শূন্য হয় (\nabla \cdot \vec{V} = 0).</div>
+<div class="bullet">অঘূর্ণনশীল ক্ষেত্র: যে ভেক্টর ক্ষেত্রের কার্লের মান শূন্য ভেক্টর হয় (\nabla \times \vec{V} = \vec{0}).</div>
+<div class="bullet">দিক কোসাইন: ত্রিমাত্রিক কার্তেসীয় ব্যবস্থার ধনাত্মক অক্ষত্রয়ের সাথে উৎপন্ন কোণের cosine মান (l=\cos\alpha, m=\cos\beta, n=\cos\gamma; যেখানে l^2+m^2+n^2=1).</div>
+<p>৮.২ অধ্যায়ের সকল প্রয়োজনীয় গাণিতিক সূত্র (Master Formula Board)</p>
+<p>টপিক (Topic)	মূল সূত্র (Formula)	প্রতীক ও বিশেষ নোট</p>
+<p>লব্ধির মান ও দিক	R = \sqrt{P^2 + Q^2 + 2PQ\cos\alpha} &lt;br&gt; \tan\theta = \frac{Q\sin\alpha}{P+Q\cos\alpha}	P, Q = ভেক্টরদ্বয়, \alpha = অন্তর্ভুক্ত কোণ, &lt;br&gt; \theta = P-এর সাথে লব্ধির কোণ।</p>
+<div class="formula">সর্বোচ্চ ও সর্বনিম্ন লব্ধি	R_{max} = P + Q \ (\alpha = 0^\circ) &lt;br&gt; R_{min} = |P - Q| \ (\alpha = 180^\circ)	R_{max} একই দিকে, R_{min} বিপরীত দিকে।</div>
+<div class="formula">সমান ভেক্টরের লব্ধি শর্টকাট	R = 2P\cos\left(\frac{\alpha}{2}\right), \ \theta = \frac{\alpha}{2}	প্রযোজ্য যখন P = Q; লব্ধি কোণকে সমদ্বিখণ্ডিত করে।</div>
+<div class="formula">দ্বিমাত্রিক ভেক্টর বিভাজন	X = R\cos\alpha, \ Y = R\sin\alpha	$X = $ অনুভূমিক উপাংশ, $Y = $ উলম্ব উপাংশ।</div>
+<p>নদী-নৌকা (সর্বনিম্ন দূরত্ব)	\alpha = \cos^{-1}\left(-\frac{u}{v}\right), \ w = \sqrt{v^2-u^2} &lt;br&gt; t = \frac{d}{\sqrt{v^2-u^2}}, \ x = 0	$u = $ স্রোতের বেগ, $v =  নৌকার বেগ (u &lt; v$), &lt;br&gt; $d = $ প্রস্থ, $x = $ পার বরাবর সরণ (Drift)।</p>
+<div class="formula">নদী-নৌকা (সর্বনিম্ন সময়)	\alpha = 90^\circ, \ t_{min} = \frac{d}{v} &lt;br&gt; x = ut = u\left(\frac{d}{v}\right), \ w = \sqrt{u^2+v^2}	$t_{min} = $ সর্বনিম্ন সময়; পার বরাবর সরণ ঘটে।</div>
+<p>ডট গুণন ও কোণ নির্ণয়	\vec{A} \cdot \vec{B} = A_x B_x + A_y B_y + A_z B_z &lt;br&gt; \cos\theta = \frac{\vec{A} \cdot \vec{B}}{AB}	লম্ব অভিক্ষেপ: B\cos\theta = \frac{\vec{A} \cdot \vec{B}}{A}</p>
+<p>ক্রস গুণন ও ক্ষেত্রফল	\vec{A} \times \vec{B} = \begin{vmatrix} \hat{i} &amp; \hat{j} &amp; \hat{k} \\ A_x &amp; A_y &amp; A_z \\ B_x &amp; B_y &amp; B_z \end{vmatrix}	সামান্তরিকের ক্ষেত্রফল = |\vec{A} \times \vec{B}|, &lt;br&gt; ত্রিভুজের ক্ষেত্রফল = \frac{1}{2}|\vec{A} \times \vec{B}|</p>
+<div class="formula">দিক কোসাইন সম্পর্ক	\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1	\alpha, \beta, \gamma = X, Y, Z অক্ষের সাথে উৎপন্ন কোণ।</div>
+<p>ভেক্টর ক্যালকুলাস	\text{grad } \phi = \nabla \phi &lt;br&gt; \text{div } \vec{V} = \nabla \cdot \vec{V} &lt;br&gt; \text{curl } \vec{V} = \nabla \times \vec{V}	\nabla = \hat{i}\frac{\partial}{\partial x} + \hat{j}\frac{\partial}{\partial y} + \hat{k}\frac{\partial}{\partial z}</p>
+<p>৮.৩ পরীক্ষার জন্য &#x27;Must-Remember&#x27; শর্তাবলী ও ব্যতিক্রম</p>
+<h3>1. পরস্পর লম্ব হওয়ার শর্ত: \vec{A} \cdot \vec{B} = 0 \iff A_x B_x + A_y B_y + A_z B_z = 0</h3>
+<h3>2. পরস্পর সমান্তরাল হওয়ার শর্ত: \vec{A} \times \vec{B} = \vec{0} অথবা উপাংশগুলোর অনুপাত সমান: \frac{A_x}{B_x} = \frac{A_y}{B_y} = \frac{A_z}{B_z}</h3>
+<h3>3. সমতলীয় (Coplanar) ভেক্টরের শর্ত: \vec{A} \cdot (\vec{B} \times \vec{C}) = 0 (সামান্তরিকী ঘনবস্তুর আয়তন = 0)</h3>
+<h3>4. সলিনয়ডাল (Solenoidal) ক্ষেত্র: \nabla \cdot \vec{V} = 0 (প্রবাহী অসংকোচনশীল)</h3>
+<h3>5. অঘূর্ণনশীল (Irrotational) ও সংরক্ষণশীল ক্ষেত্র: \nabla \times \vec{V} = \vec{0} (কৌণিক বেগের ক্ষেত্রে \nabla \times \vec{v} = 2\vec{\omega})</h3>
+<h3>6. লন রোলার: টানা সহজ (W = mg - F\sin\theta) কিন্তু ঠেলা কঠিন (W = mg + F\sin\theta)</h3>
+<h3>7. লব্ধি যোগফল ও বিয়োগফল সমান হওয়ার শর্ত: |\vec{A}+\vec{B}| = |\vec{A}-\vec{B}| \iff \alpha = 90^\circ</h3></div></section></div></main>
+<div class="footer">HSC Physics • Vector Master Note • Static GitHub/Vercel site</div>
+<script>
+const input=document.getElementById('search'), chapters=[...document.querySelectorAll('.chapter')];
+input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();chapters.forEach(c=>c.classList.toggle('hidden',q && !c.innerText.toLowerCase().includes(q)));});
+</script></body></html>
